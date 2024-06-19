@@ -9,13 +9,14 @@ O backend é implementado em Flask, e a interface de usuário é construída com
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/mariana-conta-um/mnist-digit-recognizer.git
-   cd mnist-digit-recognizer
+   git clone https://github.com/Eduardo-Barreto/mariana-conta-um.git
+   cd mariana-conta-um
    ```
 
 2. Crie um ambiente virtual e instale as dependências:
 
    ```bash
+   cd src/
    python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
@@ -38,9 +39,10 @@ O backend é implementado em Flask, e a interface de usuário é construída com
 - `/predict`: Rota que recebe uma imagem e retorna o dígito previsto.
 - `/`: Rota que exibe a página HTML com o formulário para envio de uma imagem.
 
-## Modelo
+## Modelos
 
-O modelo CNN foi treinado utilizando o dataset MNIST e está salvo no arquivo `pesos.h5`.
+O projeto conta com 2 modelos, um MLP chamado `mlp_model` (:p) e um com CNN chamado `cnn_model` (:p), ambos na pasta src/models
+
 
 ---
 
