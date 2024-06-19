@@ -30,10 +30,6 @@ O backend é implementado em Flask, e a interface de usuário é construída com
 
 4. Acesse a aplicação em [http://localhost:5000](http://localhost:5000).
 
-## Vídeo de Demonstração
-
-[Link para o vídeo](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
 ## Como Funciona
 
 - `/predict`: Rota que recebe uma imagem e retorna o dígito previsto.
@@ -43,6 +39,13 @@ O backend é implementado em Flask, e a interface de usuário é construída com
 
 O projeto conta com 2 modelos, um MLP chamado `mlp_model` (:p) e um com CNN chamado `cnn_model` (:p), ambos na pasta src/models
 
+Métricas do modelo MLP:
+![mlp_metrics](assets/mlp_metrics.png)
+
+Métricas do modelo CNN:
+![cnn_metrics](assets/cnn_metrics.png)
+
+## Vídeo de Demonstração
 
 ---
 
