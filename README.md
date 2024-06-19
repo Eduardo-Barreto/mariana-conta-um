@@ -40,12 +40,17 @@ O backend é implementado em Flask, e a interface de usuário é construída com
 O projeto conta com 2 modelos, um MLP chamado `mlp_model` (:p) e um com CNN chamado `cnn_model` (:p), ambos na pasta src/models
 
 Métricas do modelo MLP:
-![mlp_metrics](assets/mlp_metrics.png)
+![mlp_metrics](assets/mlp_epochs.png)
 
 Métricas do modelo CNN:
-![cnn_metrics](assets/cnn_metrics.png)
+![cnn_metrics](assets/cnn_epochs.png)
+
+É possível notar pelas métricas e pela demonstração que o CNN tem uma performance melhor.
 
 ## Vídeo de Demonstração
+
+https://github.com/Eduardo-Barreto/mariana-conta-um/assets/34964398/cf2b522b-68f2-4aa9-8a68-11f4343fc513
+
 
 ---
 
