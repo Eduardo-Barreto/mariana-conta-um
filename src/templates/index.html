@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mariana conta um...</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <script src="https://unpkg.com/htmx.org@2.0.0"
+        integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Mariana conta um</h1>
+            <h1 class="subtitle">
+                Classificador de dígitos escritos a mão (MNIST)
+            </h1>
+            <div class="box">
+                <form id="upload-form" hx-post="/predict" hx-target="#result" enctype="multipart/form-data">
+                    <div class="field">
+                        <label class="label">Joga o digito no peito do seu pai</label>
+                        <div class="control">
+                            <input class="input" type="file" name="file" required />
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary" type="submit">bora</button>
+                    </div>
+                </form>
+                <div id="result" class="notification is-info mt-4"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("htmx:afterRequest", (event) => {
+            const resultDiv = document.getElementById("result");
+            const data = JSON.parse(event.detail.xhr.response);
+            console.dir(data);
+            resultDiv.innerHTML = `CNN <s>news</s>: ${data.cnn_digit}<br>Linear: ${data.mlp_digit}`;
+        });
+    </script>
+</body>
+
+</html>
